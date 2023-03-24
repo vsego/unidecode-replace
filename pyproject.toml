@@ -1,0 +1,41 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "unidecode-replace"
+description = "Python package providing search-and-replace in a unidecode compatible manner"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [
+    { name="Vedran Sego", email = "vsego@vsego.org" },
+]
+license = "MIT"
+classifiers = [
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Typing :: Typed",
+]
+keywords = []
+dynamic = ["version"]
+dependencies = [
+]
+
+[project.urls]
+"Homepage" = "https://github.com/vsego/unidecode-replace"
+"Bug Tracker" = "https://github.com/vsego/unidecode-replace/issues"
+"Changelog" = "https://github.com/vsego/unidecode-replace/blob/master/CHANGELOG.md"
+
+[tool]
+
+[tool.hatch.version]
+path = "src/unidecode_replace/version.py"
+
+[tool.hatch.build.targets.sdist]
+exclude = [
+  "/.github",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/unidecode_replace"]
